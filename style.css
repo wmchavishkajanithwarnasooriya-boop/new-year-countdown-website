@@ -329,37 +329,279 @@ footer {
     position: relative;
 }
 
-/* Responsive */
+/* Timeline/Grid Container adjustment */
+.timeline-container {
+    display: grid;
+    /* Reduced min-width to 280px to fit smaller phones */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    padding-bottom: 50px;
+    z-index: 2;
+}
+
+/* ... existing styles ... */
+
+/* Responsive & Device Optimization */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 5rem;
+    }
+    
+    .content-wrapper {
+        padding: 0 4%;
+    }
+}
+
 @media (max-width: 900px) {
     .content-wrapper {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        padding-top: 100px; /* Ensure content starts below any fixed headers if added later */
     }
     
     .hero-section {
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+    .main-title {
+        font-size: clamp(3rem, 10vw, 5rem); /* Responsive font scaling */
     }
 
     .countdown-container {
         width: 100%;
-        padding: 30px 20px 60px 20px; /* Increased bottom padding for footer */
-        margin-top: 30px; /* Add some space from the button */
+        max-width: 500px; /* Limit width on tablets */
+        padding: 30px 20px 60px 20px;
+        margin-top: 20px;
     }
 
     .time-value {
-        font-size: 2.5rem; /* Slightly larger for better visibility */
+        font-size: 2.2rem;
     }
     
     .countdown-item:not(:last-child)::after {
         font-size: 1.5rem;
-        top: 10px;
+        top: 8px;
         right: -10px;
     }
 
     .countdown-footer {
         font-size: 0.8rem;
-        bottom: 20px; /* Adjust layout */
+        bottom: 20px;
     }
 }
+
+@media (max-width: 480px) {
+    .timeline-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        padding: 0 20px;
+    }
+    
+    .main-title {
+        line-height: 1; /* Better spacing for wrapped text */
+    }
+
+    .cta-button {
+        width: 100%; /* Full width button on mobile */
+        text-align: center;
+    }
+
+    .countdown-container {
+        padding: 20px 10px 50px 10px; /* tighter padding */
+        gap: 10px;
+    }
+
+    .time-value {
+        font-size: 1.8rem;
+    }
+
+    .time-label {
+        font-size: 0.6rem;
+    }
+    
+    .countdown-item:not(:last-child)::after {
+        right: -8px;
+    }
+}
+@
+
+/* =========================================
+   Event Details Page Styles (Moved from HTML)
+   ========================================= */
+.event-hero {
+    height: 60vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    z-index: 0;
+}
+
+.event-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.event-month {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.event-main-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.event-body {
+    max-width: 1000px;
+    margin: -50px auto 50px; /* Overlap hero default */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.event-date {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 5px;
+}
+
+.event-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.highlights-box {
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid #d4af37;
+    margin-bottom: 30px;
+}
+
+.highlights-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.highlights-list {
+    list-style: none;
+}
+
+.highlights-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.highlights-list li::before {
+    content: '•';
+    color: #d4af37;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    top: -5px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Event Page Responsive */
+@media (max-width: 900px) {
+    .event-body {
+        margin: -30px 20px 50px 20px; /* Less overlap, sidebar margins */
+        padding: 30px 20px;
+    }
+    
+    .event-main-title {
+        font-size: 2.5rem;
+    }
+    
+    .event-hero {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-body {
+        margin: 0 10px 30px 10px; /* No overlap on mobile, just block flow */
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .event-hero {
+        height: 40vh; /* Smaller hero */
+    }
+
+    .event-main-title {
+        font-size: 2rem;
+    }
+
+    .event-month {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+
+    .highlights-box {
+        padding: 20px;
+    }
+}
+@
