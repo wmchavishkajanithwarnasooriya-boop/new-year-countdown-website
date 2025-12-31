@@ -16,9 +16,6 @@ const eventsData = {
             "Sri Lanka won ODI Series 2-0 in Colombo",
             "Charith Asalanka's leadership shines in ODIs",
             "Source: Sri Lanka Cricket / Fox Sports"
-        ],
-        extraMedia: [
-            { type: "video", src: "https://www.youtube.com/embed/j_hG0lF_F4k" }
         ]
     },
     2: {
@@ -76,9 +73,6 @@ const eventsData = {
             "Direct connectivity to Palaly Airport",
             "Symbolic milestone in northern reconciliation",
             "Source: PMD News / Jaffna Secretariat"
-        ],
-        extraMedia: [
-            { type: "video", src: "https://www.youtube.com/embed/XqC9LwE7eWc" }
         ]
     },
     5: {
@@ -155,9 +149,6 @@ const eventsData = {
             "Randoli Perahera reaches record-level participation",
             "Success of the 'Global Heritage' live stream",
             "Source: Dalada Maligawa / Cultural Ministry"
-        ],
-        extraMedia: [
-            { type: "video", src: "https://www.youtube.com/embed/j_8jH4tV-oM" }
         ]
     },
     9: {
@@ -215,9 +206,6 @@ const eventsData = {
             "Estimated Damages: USD 7 Billion (7% of GDP)",
             "Global economists call for immediate debt suspension",
             "Source: MR Online / peoplesdispatch.org / UN OCHA"
-        ],
-        extraMedia: [
-            { type: "video", src: "https://www.youtube.com/embed/5U2fI6p28uE" }
         ]
     },
     12: {
