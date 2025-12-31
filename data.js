@@ -3,7 +3,7 @@ const eventsData = {
         month: "January",
         title: "Australian Cricket Tour",
         date: "January 2025",
-        image: "background.png", 
+        image: "img_jan_cricket.jpg", 
         description: "Sri Lanka Cricket (SLC) celebrated a historic series victory against the touring Australian team. The matches were a display of grit and skill, with young talents shining on home soil.",
         highlights: [
             "Test Series Win in Galle",
@@ -16,7 +16,7 @@ const eventsData = {
         month: "February",
         title: "2025 Budget & Export Plan",
         date: "February 2025",
-        image: "summary_bg.png",
+        image: "img_feb_finance.jpg",
         description: "The Ministry of Finance unveiled the 2025 Budget proposals, emphasizing a shift towards an export-oriented economy. Key reforms targeted digital infrastructure and agricultural exports.",
         highlights: [
             "Export-focused Economic Policy",
@@ -29,7 +29,7 @@ const eventsData = {
         month: "March",
         title: "Interest Rates Plunge",
         date: "March 2025",
-        image: "summary_bg.png",
+        image: "img_mar_cbsl.jpg",
         description: "The Central Bank of Sri Lanka (CBSL) announced a major reduction in policy interest rates, aiming to stimulate economic growth and reduce the cost of borrowing for businesses.",
         highlights: [
             "Policy Rate Cut",
@@ -42,7 +42,7 @@ const eventsData = {
         month: "April",
         title: "Vasavilan-Palaly Road",
         date: "April 2025",
-        image: "event_nature.png",
+        image: "img_apr_road.jpg",
         description: "The historic Vasavilan-Palaly road was reopened to the public, marking a significant step in reconciliation. This allows direct access to the Palaly Airport and reconnects communities.",
         highlights: [
             "Reopening after 30 years",
@@ -55,7 +55,7 @@ const eventsData = {
         month: "May",
         title: "Sancharaka Udawa 2025",
         date: "May 2025",
-        image: "event_lights.png",
+        image: "img_may_tourism.jpg",
         description: "The 'Sancharaka Udawa' exhibition brought together tourism stakeholders to showcase Sri Lanka's potential. The event focused on sustainable tourism and attracting high-end travelers.",
         highlights: [
             "Largest Tourism Fair",
@@ -68,7 +68,7 @@ const eventsData = {
         month: "June",
         title: "Sinopec Refinery Deal",
         date: "June 2025",
-        image: "port_city.jpg",
+        image: "img_jun_oil.jpg",
         description: "A landmark agreement was signed with Sinopec to build a modern oil refinery. This investment is set to transform the energy sector and ensure fuel security for the island.",
         highlights: [
             "Multi-billion Dollar FDI",
@@ -79,9 +79,9 @@ const eventsData = {
     },
     7: {
         month: "July",
-        title: "Jaffna Int. Cricket Stadium",
+        title: "Jaffna Int. Stadium",
         date: "July 2025",
-        image: "cricket_logo.png",
+        image: "img_jul_stadium.jpg",
         description: "Construction began on the Jaffna International Cricket Stadium. This project aims to decentralize sports infrastructure and bring international matches to the Northern populace.",
         highlights: [
             "Foundation Stone Laying",
@@ -94,7 +94,7 @@ const eventsData = {
         month: "August",
         title: "Esala Perahera Festival",
         date: "August 2025",
-        image: "event_culture.png",
+        image: "img_aug_perahera.jpg",
         description: "The streets of Kandy came alive with the Esala Perahera, showcasing Sri Lanka's rich cultural heritage. The festival attracted record numbers of tourists this year.",
         highlights: [
             "Grand Cultural Procession",
@@ -107,7 +107,7 @@ const eventsData = {
         month: "September",
         title: "Central Expressway Resumes",
         date: "September 2025",
-        image: "background.png",
+        image: "img_sep_highway.jpg",
         description: "Work resumed on the Central Expressway, a critical project for connecting the country's economic hubs. The road development authority announced expedited timelines for completion.",
         highlights: [
             "Construction Restarted",
@@ -120,7 +120,7 @@ const eventsData = {
         month: "October",
         title: "National IT Conference",
         date: "October 2025",
-        image: "summary_bg.png",
+        image: "img_oct_tech.jpg",
         description: "The National IT Conference (NITC 2025) highlighted the country's growing tech ecosystem. Experts discussed AI, cybersecurity, and the future of Sri Lanka's digital economy.",
         highlights: [
             "Tech Innovation Showcase",
@@ -133,7 +133,7 @@ const eventsData = {
         month: "November",
         title: "Cyclone 'Ditwah' Impact",
         date: "November 2025",
-        image: "cyclone_real.jpg",
+        image: "img_nov_cyclone.jpg",
         description: "Cyclone 'Ditwah' brought heavy rains and strong winds to the island. Disaster management teams worked tirelessly to provide relief to affected communities in the coastal areas.",
         highlights: [
             "Disaster Response Mobilized",
@@ -146,7 +146,7 @@ const eventsData = {
         month: "December",
         title: "World Bank Relief Aid",
         date: "December 2025",
-        image: "summary_bg.png",
+        image: "img_dec_aid.jpg",
         description: "The World Bank announced significant relief aid to support Sri Lanka's economic recovery and infrastructure rebuilding efforts, closing the year with a hopeful outlook.",
         highlights: [
             "Major Financial Grant",
