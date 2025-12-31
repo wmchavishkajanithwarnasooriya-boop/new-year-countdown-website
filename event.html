@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Details - Sri Lanka 2025</title>
+    <title>News - Sri Lanka 2025</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
-<body>
+<body class="event-details-body">
 
-    <!-- Dynamic Content Loaded Here -->
-    <div id="event-container"></div>
+    <div id="newspaper-container"></div>
 
-    <script src="data.js?v=3"></script>
+    <script src="data.js?v=5"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const params = new URLSearchParams(window.location.search);
@@ -23,61 +22,87 @@
 
             if (data) {
                 const currentId = parseInt(id);
-                // Navigation logic
                 const nextId = currentId < 12 ? currentId + 1 : 1;
                 const prevId = currentId > 1 ? currentId - 1 : 12;
 
-                const container = document.getElementById('event-container');
+                const container = document.getElementById('newspaper-container');
                 container.innerHTML = `
-                    <div class="event-hero">
-                        <img src="${data.image}" alt="${data.title}" class="event-hero-img">
-                        <div class="event-hero-content">
-                            <p class="event-month">${data.month}</p>
-                            <h1 class="event-main-title">${data.title}</h1>
-                        </div>
-                    </div>
-                    <div class="event-body">
-                        <span class="event-date">${data.date}</span>
-                        <p class="event-text">${data.description}</p>
-                        
-                        <div class="highlights-box">
-                            <h3 class="highlights-title">Event Highlights</h3>
-                            <ul class="highlights-list">
-                                ${data.highlights.map(h => `<li>${h}</li>`).join('')}
-                            </ul>
-                        </div>
-
-                        ${data.extraMedia && data.extraMedia.length > 0 ? `
-                        <div class="media-gallery" style="margin-top: 40px;">
-                            <h3 style="color:white; margin-bottom:20px; font-family:'Outfit';">Gallery & Media</h3>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                                ${data.extraMedia.map(item => {
-                                    if(item.type === 'image') {
-                                        return `<img src="${item.src}" style="width:100%; border-radius:15px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" alt="Gallery Image">`;
-                                    } else if(item.type === 'video') {
-                                        return `
-                                            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;">
-                                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="${item.src}" allowfullscreen></iframe>
-                                            </div>`;
-                                    }
-                                    return '';
-                                }).join('')}
+                    <div class="newspaper-wrapper">
+                        <header class="newspaper-header">
+                            <div class="newspaper-masthead">The Sri Lanka Chronicles</div>
+                            <div class="newspaper-date-line">
+                                <span>Vol. 2025 • No. ${id}</span>
+                                <span>${data.month} 2025</span>
+                                <span>Special Edition</span>
                             </div>
-                        </div>
-                        ` : ''}
+                        </header>
 
-                        <div style="text-align:center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 40px;">
-                            <a href="event.html?id=${prevId}" class="back-btn" style="border-color: rgba(255,255,255,0.3);">← Previous</a>
-                            <a href="index.html#summary" class="back-btn">Summary</a>
-                            <a href="event.html?id=${nextId}" class="back-btn" style="background: white; color: black;">Next Event →</a>
-                        </div>
+                        <article>
+                            <h1 class="article-headline">${data.title}</h1>
+                            <p class="article-subheadline">${data.subtitle || 'Unveiling the pivotal moments of our nation.'}</p>
+
+                            <div class="article-hero-media">
+                                <img src="${data.image}" alt="${data.title}">
+                                <div class="media-caption">Exclusive photo coverage of the ${data.title} event in ${data.month} 2025.</div>
+                            </div>
+
+                            <div class="article-columns">
+                                <div class="article-main-text">
+                                    ${data.fullText || data.description.split('\n').map(p => `<p>${p}</p>`).join('')}
+                                </div>
+
+                                <aside class="newspaper-sidebar">
+                                    <div class="sidebar-box">
+                                        <h3 class="sidebar-title">Key Highlights</h3>
+                                        <ul class="sidebar-list">
+                                            ${data.highlights.map(h => `<li>${h}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                    <div class="sidebar-box" style="background: #000; color: #fff;">
+                                        <h3 class="sidebar-title" style="color: #fff; border-color: #fff;">Context</h3>
+                                        <p style="font-size: 0.8rem; line-height: 1.5; opacity: 0.9;">
+                                            This report is part of a 12-month series documenting the most significant shifts in Sri Lanka during the year 2025.
+                                        </p>
+                                    </div>
+                                </aside>
+                            </div>
+
+                            ${data.extraMedia && data.extraMedia.length > 0 ? `
+                                <h2 class="news-gallery-title">Field Reports & Media</h2>
+                                <div class="news-gallery-grid">
+                                    ${data.extraMedia.map(item => {
+                                        if(item.type === 'image') {
+                                            return `
+                                                <div class="gallery-card">
+                                                    <img src="${item.src}" style="width:100%;" alt="Field Photo">
+                                                    <p class="media-caption">Verified Field Report Image</p>
+                                                </div>`;
+                                        } else if(item.type === 'video') {
+                                            return `
+                                                <div class="gallery-card">
+                                                    <iframe src="${item.src}" allowfullscreen></iframe>
+                                                    <p class="media-caption">Exclusive Video Coverage</p>
+                                                </div>`;
+                                        }
+                                        return '';
+                                    }).join('')}
+                                </div>
+                            ` : ''}
+                        </article>
+
+                        <nav class="news-nav">
+                            <a href="event.html?id=${prevId}" class="news-nav-btn">← Previous</a>
+                            <a href="index.html#summary" class="news-nav-btn">Home Archive</a>
+                            <a href="event.html?id=${nextId}" class="news-nav-btn">Next →</a>
+                        </nav>
                     </div>
-                    <footer>
-                        <p>&copy; 2025 Sri Lanka Reflections. All Rights Reserved.</p>
+
+                    <footer style="color:#000; text-align:center; padding: 40px 0; border-top: 1px solid #ddd; border-bottom: 4px solid #000; margin-bottom: 40px; font-weight:700; text-transform:uppercase; letter-spacing:2px;">
+                        &copy; 2025 THE SRI LANKA CHRONICLES • ALL RIGHTS RESERVED
                     </footer>
                 `;
             } else {
-                document.body.innerHTML = '<h1 style="text-align:center; padding-top:100px; color:white;">Event Not Found</h1> <div style="text-align:center;"><a href="index.html" style="color:white; margin-top:20px; display:inline-block;">Back Home</a></div>';
+                document.body.innerHTML = '<h1 style="text-align:center; padding-top:100px; color:black; font-family:serif;">EDITION NOT FOUND</h1> <div style="text-align:center;"><a href="index.html" style="color:black;">Return to Archive</a></div>';
             }
         });
     </script>

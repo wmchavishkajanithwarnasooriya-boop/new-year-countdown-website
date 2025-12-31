@@ -1,4 +1,4 @@
-/* Global Reset */
+﻿/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     color: white;
-    background-color: #000; /* Fallback */
+    background-color: #000;
     position: relative;
 }
 
@@ -29,7 +29,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Changed from -1 to 0 to sit above body background if body is transparent, but here we manage layers manually */
+    z-index: 0;
     overflow: hidden;
 }
 
@@ -60,7 +60,6 @@ body {
 /* Main Content Wrapper (Landing Page) */
 .content-wrapper {
     position: relative;
-    /* height: 100vh;  Ensure it takes full view height */
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -69,32 +68,22 @@ body {
     padding: 0 5%;
     max-width: 1600px;
     margin: 0 auto;
-    z-index: 1; /* Above background */
+    z-index: 1;
 }
 
-/* Text Section */
 .hero-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    padding-top: 100px; /* Space for aesthetic balance */
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
 .text-container {
     flex: 1;
     min-width: 300px;
-    z-index: 2;
-}
-
-.mini-heading {
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-bottom: 10px;
 }
 
 .main-title {
@@ -106,14 +95,6 @@ body {
     background: linear-gradient(to right, #ffffff, #c0c0c0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    margin-bottom: 40px;
-    font-weight: 300;
 }
 
 .cta-button {
@@ -124,9 +105,8 @@ body {
     text-decoration: none;
     font-weight: 600;
     border-radius: 30px;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: 0.3s;
     text-transform: uppercase;
-    font-size: 0.9rem;
 }
 
 .cta-button:hover {
@@ -134,65 +114,21 @@ body {
     background: #e0e0e0;
 }
 
-/* Countdown Section */
 .countdown-container {
     flex: 1;
     display: flex;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     min-width: 300px;
-    z-index: 2;
-}
-
-.countdown-footer {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    opacity: 0.6;
-    width: 100%;
-    text-align: center;
-}
-
-.countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.countdown-item:not(:last-child)::after {
-    content: ':';
-    position: absolute;
-    right: -12px;
-    top: 15px;
-    font-size: 2rem;
-    opacity: 0.5;
-    font-weight: 300;
 }
 
 .time-value {
     font-size: 3.5rem;
     font-weight: 700;
-    line-height: 1;
-}
-
-.time-label {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    margin-top: 5px;
-    opacity: 0.8;
 }
 
 /* Summary Section Styles */
@@ -200,100 +136,50 @@ body {
     position: relative;
     min-height: 100vh;
     padding: 100px 5%;
+    background: #000 url('summary_bg.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Use the generated generic background for this section */
-    background: #000 url('summary_bg.png') no-repeat center center fixed;
-    background-size: cover;
-    z-index: 10; /* Ensure it sits on top of the fixed background */
-}
-
-.summary-heading {
-    text-align: center;
-    margin-bottom: 80px;
-    z-index: 2;
 }
 
 .summary-heading h2 {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: clamp(2rem, 8vw, 4rem);
     text-transform: uppercase;
-    background: linear-gradient(to bottom, #fff, #aaa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.summary-heading p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Timeline/Grid Container */
 .timeline-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     width: 100%;
     max-width: 1400px;
-    padding-bottom: 50px;
-    z-index: 2;
 }
 
-/* Month Card */
 .month-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     padding: 30px;
     border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
     position: relative;
     overflow: hidden;
-    color: white; /* Ensure text color is preserved in anchor */
 }
 
 .month-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     border-color: rgba(255, 255, 255, 0.2);
-}
-
-.month-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-    transform: translateX(-100%);
-    transition: 0.5s;
-}
-
-.month-card:hover::before {
-    transform: translateX(100%);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
 }
 
 .month-name {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #fff;
-    text-transform: uppercase;
 }
 
 .month-number {
@@ -303,305 +189,236 @@ body {
     position: absolute;
     top: 10px;
     right: 20px;
-    pointer-events: none;
 }
 
 .event-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: #d4af37; /* Gold accent */
+    color: #d4af37;
+    margin: 15px 0 10px;
 }
-
-.event-desc {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    opacity: 0.8;
-    color: #ddd;
-}
-
-footer {
-    padding: 50px;
-    text-align: center;
-    background: #000;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    z-index: 2;
-    position: relative;
-}
-
-/* Timeline/Grid Container adjustment */
-.timeline-container {
-    display: grid;
-    /* Reduced min-width to 280px to fit smaller phones */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    width: 100%;
-    max-width: 1400px;
-    padding-bottom: 50px;
-    z-index: 2;
-}
-
-/* ... existing styles ... */
-
-/* Responsive & Device Optimization */
-@media (max-width: 1024px) {
-    .main-title {
-        font-size: 5rem;
-    }
-    
-    .content-wrapper {
-        padding: 0 4%;
-    }
-}
-
-@media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-top: 100px; /* Ensure content starts below any fixed headers if added later */
-    }
-    
-    .hero-section {
-        flex-direction: column;
-        gap: 40px;
-        padding-top: 40px;
-        padding-bottom: 60px;
-    }
-
-    .text-container {
-        width: 100%;
-    }
-
-    .main-title {
-        font-size: clamp(3rem, 10vw, 5rem); /* Responsive font scaling */
-    }
-
-    .countdown-container {
-        width: 100%;
-        max-width: 500px; /* Limit width on tablets */
-        padding: 30px 20px 60px 20px;
-        margin-top: 20px;
-    }
-
-    .time-value {
-        font-size: 2.2rem;
-    }
-    
-    .countdown-item:not(:last-child)::after {
-        font-size: 1.5rem;
-        top: 8px;
-        right: -10px;
-    }
-
-    .countdown-footer {
-        font-size: 0.8rem;
-        bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline-container {
-        grid-template-columns: 1fr; /* Single column on very small screens */
-        padding: 0 20px;
-    }
-    
-    .main-title {
-        line-height: 1; /* Better spacing for wrapped text */
-    }
-
-    .cta-button {
-        width: 100%; /* Full width button on mobile */
-        text-align: center;
-    }
-
-    .countdown-container {
-        padding: 20px 10px 50px 10px; /* tighter padding */
-        gap: 10px;
-    }
-
-    .time-value {
-        font-size: 1.8rem;
-    }
-
-    .time-label {
-        font-size: 0.6rem;
-    }
-    
-    .countdown-item:not(:last-child)::after {
-        right: -8px;
-    }
-}
-@
 
 /* =========================================
-   Event Details Page Styles (Moved from HTML)
+   Event Details Page - Newspaper Theme
    ========================================= */
-.event-hero {
-    height: 60vh;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.event-details-body {
+    background: #fdfbf7;
+    color: #1a1a1a !important;
 }
 
-.event-hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
-    z-index: 0;
+.newspaper-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-.event-hero-content {
-    position: relative;
-    z-index: 2;
+.newspaper-header {
     text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.event-month {
-    font-size: 1.5rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: #d4af37;
-    margin-bottom: 10px;
-}
-
-.event-main-title {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-.event-body {
-    max-width: 1000px;
-    margin: -50px auto 50px; /* Overlap hero default */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 50px;
-    border-radius: 20px;
-    position: relative;
-    z-index: 3;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-}
-
-.event-date {
-    font-size: 1.2rem;
-    color: #ccc;
-    margin-bottom: 30px;
-    display: inline-block;
-    border-bottom: 2px solid #d4af37;
-    padding-bottom: 5px;
-}
-
-.event-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    border-bottom: 4px double #1a1a1a;
+    padding-bottom: 20px;
     margin-bottom: 40px;
+}
+
+.newspaper-masthead {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.newspaper-date-line {
+    border-top: 1px solid #1a1a1a;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 10px 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.article-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin: 40px 0 20px;
+    text-transform: none;
+    color: #000;
+    text-align: center;
+}
+
+.article-subheadline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.article-hero-media {
+    margin-bottom: 50px;
+}
+
+.article-hero-media img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #fff;
+}
+
+.media-caption {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    text-align: left;
+    border-left: 3px solid #d4af37;
+    padding-left: 10px;
+}
+
+.article-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.article-main-text {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #222;
+}
+
+.article-main-text p {
+    margin-bottom: 25px;
     text-align: justify;
 }
 
-.highlights-box {
-    background: rgba(0,0,0,0.3);
-    padding: 30px;
-    border-radius: 15px;
-    border-left: 4px solid #d4af37;
+.article-main-text p:first-of-type::first-letter {
+    float: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 0.8;
+    padding: 10px 10px 0 0;
+    color: #000;
+}
+
+.newspaper-sidebar {
+    border-left: 1px solid #ddd;
+    padding-left: 30px;
+}
+
+.sidebar-box {
+    background: #f9f6f0;
+    padding: 25px;
+    border: 1px solid #e8e4db;
     margin-bottom: 30px;
 }
 
-.highlights-title {
-    font-size: 1.3rem;
+.sidebar-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 800;
     margin-bottom: 20px;
-    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    color: #000;
 }
 
-.highlights-list {
+.sidebar-list {
     list-style: none;
+    padding: 0;
 }
 
-.highlights-list li {
-    margin-bottom: 10px;
+.sidebar-list li {
+    margin-bottom: 15px;
     padding-left: 20px;
     position: relative;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333;
 }
 
-.highlights-list li::before {
-    content: '�';
-    color: #d4af37;
+.sidebar-list li::before {
+    content: "■";
     position: absolute;
     left: 0;
-    font-size: 1.5rem;
-    top: -5px;
+    color: #000;
+    font-size: 0.7rem;
+    top: 5px;
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    border: 1px solid white;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: 0.3s;
-    font-weight: 600;
+.news-gallery-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin: 60px 0 30px;
+    border-top: 4px solid #000;
+    padding-top: 20px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #000;
 }
 
-.back-btn:hover {
+.news-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.gallery-card {
     background: white;
-    color: black;
+    padding: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* Event Page Responsive */
+.gallery-card iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.news-nav {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.news-nav-btn {
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.news-nav-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
 @media (max-width: 900px) {
-    .event-body {
-        margin: -30px 20px 50px 20px; /* Less overlap, sidebar margins */
-        padding: 30px 20px;
+    .article-columns {
+        grid-template-columns: 1fr;
     }
-    
-    .event-main-title {
-        font-size: 2.5rem;
-    }
-    
-    .event-hero {
-        height: 50vh;
+    .newspaper-sidebar {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid #ddd;
+        padding-top: 40px;
     }
 }
-
-@media (max-width: 480px) {
-    .event-body {
-        margin: 0 10px 30px 10px; /* No overlap on mobile, just block flow */
-        padding: 20px 15px;
-        border-radius: 15px;
-    }
-
-    .event-hero {
-        height: 40vh; /* Smaller hero */
-    }
-
-    .event-main-title {
-        font-size: 2rem;
-    }
-
-    .event-month {
-        font-size: 1rem;
-        letter-spacing: 3px;
-    }
-
-    .highlights-box {
-        padding: 20px;
-    }
-}
-@
