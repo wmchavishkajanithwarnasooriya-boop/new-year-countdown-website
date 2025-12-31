@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Sri Lanka 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific Styles for the Details Page */
+        .event-hero {
+            height: 60vh;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .event-hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+        }
+
+        .event-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .event-month {
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .event-main-title {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .event-body {
+            max-width: 1000px;
+            margin: -50px auto 50px; /* Overlap hero */
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .event-date {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            display: inline-block;
+            border-bottom: 2px solid #d4af37;
+            padding-bottom: 5px;
+        }
+
+        .event-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .highlights-box {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .highlights-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .highlights-list {
+            list-style: none;
+        }
+
+        .highlights-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .highlights-list li::before {
+            content: '•';
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            top: -5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 10px 30px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Content Loaded Here -->
+    <div id="event-container"></div>
+
+    <script src="data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const data = eventsData[id];
+
+            if (data) {
+                const container = document.getElementById('event-container');
+                container.innerHTML = `
+                    <div class="event-hero">
+                        <img src="${data.image}" alt="${data.title}" class="event-hero-img">
+                        <div class="event-hero-content">
+                            <p class="event-month">${data.month}</p>
+                            <h1 class="event-main-title">${data.title}</h1>
+                        </div>
+                    </div>
+                    <div class="event-body">
+                        <span class="event-date">${data.date}</span>
+                        <p class="event-text">${data.description}</p>
+                        
+                        <div class="highlights-box">
+                            <h3 class="highlights-title">Event Highlights</h3>
+                            <ul class="highlights-list">
+                                ${data.highlights.map(h => `<li>${h}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        <div style="text-align:center;">
+                            <a href="index.html#summary" class="back-btn">← Back to Summary</a>
+                        </div>
+                    </div>
+                    <footer>
+                        <p>&copy; 2025 Sri Lanka Reflections. All Rights Reserved.</p>
+                    </footer>
+                `;
+            } else {
+                document.body.innerHTML = '<h1 style="text-align:center; padding-top:100px; color:white;">Event Not Found</h1> <div style="text-align:center;"><a href="index.html" style="color:white;">Back Home</a></div>';
+            }
+        });
+    </script>
+</body>
+</html>
