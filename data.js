@@ -1,158 +1,158 @@
 const eventsData = {
     1: {
         month: "January",
-        title: "Duruthu Perahera",
-        date: "January 14, 2025",
-        image: "event_culture.png",
-        description: "The Duruthu Perahera at Kelaniya Raja Maha Vihara marks the Buddha's first visit to Sri Lanka. This magnificent procession features traditional drummers, dancers, and elephants adorned in lavish garments. It is a time of spiritual reflection and cultural grandeur, drawing thousands of devotees and tourists alike.",
+        title: "Australian Cricket Tour Victory",
+        date: "January 2025",
+        image: "background.png", /* Reuse existing */
+        description: "The Sri Lankan cricket team started the year on a high note with a historic series victory against the touring Australian team. The Test series, played in Galle, saw spin dominance, while the ODIs showcased the young batting talent of the island.",
         highlights: [
-            "Traditional Kandyan Dance Performances",
-            "majestic Elephant Procession",
-            "Fire Dancers and Whip Crackers",
-            "Sacred Relic Exposition"
+            "Series Win against Australia",
+            "Record-breaking spin bowling performance",
+            "Packed stadiums in Galle and Colombo",
+            "Source: SLC / ESPNcricinfo"
         ]
     },
     2: {
         month: "February",
-        title: "Independence Day Celebrations",
-        date: "February 4, 2025",
-        image: "background.png", 
-        description: "Sri Lanka celebrated its 77th Independence Day with a grand parade in Colombo. The event showcased the nation's military strength and cultural diversity. The President addressed the nation, emphasizing unity and the road to economic prosperity.",
+        title: "2025 Budget & Export Plan",
+        date: "February 2025",
+        image: "summary_bg.png", 
+        description: "The Ministry of Finance presented the 2025 Budget, focusing heavily on export-oriented growth and digital infrastructure. New tax incentives for IT and agricultural exports were introduced to boost foreign reserves.",
         highlights: [
-            "National Flag Hoisting Ceremony",
-            "Military Parade and Air Show",
-            "Cultural Pageants representing all ethnicities",
-            "Address to the Nation by the President"
+            "Focus on Export Economy",
+            "Tax incentives for Startups",
+            "Green Energy subsidies",
+            "Source: Ministry of Finance / Daily FT"
         ]
     },
     3: {
         month: "March",
-        title: "International Science Summit",
-        date: "March 15-18, 2025",
-        image: "background.png",
-        description: "Colombo played host to a groundbreaking International Science Summit, bringing together leading researchers and innovators from across South Asia. Key discussions focused on sustainable technology, renewable energy, and ocean conservation.",
+        title: "Interest Rates Plunge",
+        date: "March 2025",
+        image: "summary_bg.png",
+        description: "The Central Bank of Sri Lanka announced a significant reduction in policy interest rates, signaling economic recovery and encouraging private sector investment. Inflation figures dropped to single digits, stabilizing the cost of living.",
         highlights: [
-            "Keynote by Nobel Laureates",
-            "Exhibition of Local Innovations",
-            "Partnerships for Green Energy",
-            "Launch of 'Smart Sri Lanka' Initiative"
+            "Policy Rate cut by 200 basis points",
+            "Boost for Construction Industry",
+            "Stock Market Rally",
+            "Source: CBSL Monthly Review"
         ]
     },
     4: {
         month: "April",
-        title: "Sinhala & Tamil New Year",
-        date: "April 14, 2025",
-        image: "event_nature.png",
-        description: "The sun's transition from Meena to Mesha Rashi marked the traditional New Year. The entire island partook in auspicious rituals at the same times, boiling milk and sharing meals. Village games and traditional sweets like Kavum and Kokis were the highlights of the festive season.",
+        title: "Vasavilan-Palaly Road Opens",
+        date: "April 2025",
+        image: "background.png",
+        description: "In a landmark move for reconciliation and development, the Vasavilan-Palaly road was fully opened to the public after decades. This reopening significantly improved connectivity in the Northern Peninsula and facilitated easier access to the Palaly Airport.",
         highlights: [
-            "Lighting of the Hearth at Auspicious Time",
-            "Traditional Games (Kotta Pora, Tug of War)",
-            "Family Reunions and Gift Giving",
-            "Community Banquets"
+            "Restored North-South connectivity",
+            "Access to Palaly International Airport",
+            "Return of undisputed lands to civilians",
+            "Source: PMD / The Morning"
         ]
     },
     5: {
         month: "May",
-        title: "Vesak Full Moon Poya",
-        date: "May 12, 2025",
+        title: "Sancharaka Udawa 2025",
+        date: "May 2025",
         image: "event_lights.png",
-        description: "Sri Lanka glowed in spiritual light during Vesak, commemorating the Birth, Enlightenment, and Passing Away of Lord Buddha. Massive Pandols (Thorana) told Jataka tales, while every home lit varied lanterns. Dansals (free food stalls) lined the streets, showcasing Sri Lankan hospitality.",
+        description: "The 'Sancharaka Udawa' tourism exhibition returned on a grand scale, showcasing Sri Lanka's potential as a premier travel destination. Over 500 exhibitors participated, and the event highlighted sustainable tourism practices.",
         highlights: [
-            "Colorful Vesak Lanterns and Decorations",
-            "Giant Electrified Pandols",
-            "Bhakthi Gee (Devotional Songs)",
-            "Community Dansals giving free food"
+            "Exhibition at BMICH",
+            "Launch of new Eco-Tourism zones",
+            "Global Tour Operator meetups",
+            "Source: SLTPB"
         ]
     },
     6: {
         month: "June",
-        title: "Poson Festival at Mihintale",
-        date: "June 11, 2025",
-        image: "event_lights.png", 
-        description: "Devotees climbed the sacred rock of Mihintale to celebrate the arrival of Buddhism in Sri Lanka. The area was illuminated with thousands of oil lamps, creating a mesmerizing sight. Religious observances and meditation programs were held throughout the night.",
+        title: "Sinopec Refinery Deal",
+        date: "June 2025",
+        image: "summary_bg.png", 
+        description: "Sri Lanka signed a definitive agreement with Sinopec to establish a major oil refinery in Hambantota. This multi-billion dollar investment is the largest foreign direct investment (FDI) in the country's history, promising energy security and jobs.",
         highlights: [
-            "Pilgrimage to Mihintale Rock",
-            "Illumination of Chethiyas",
-            "Sil Campaigns",
-            "Historical Re-enactments"
+            "$4.5 Billion Investment",
+            "Hambantota Energy Hub launch",
+            "Employment for local youth",
+            "Source: Ministry of Power / Reuters"
         ]
     },
     7: {
         month: "July",
-        title: "Kataragama Esala Festival",
-        date: "July 24, 2025",
-        image: "event_culture.png", 
-        description: "The jungle shrine of Kataragama came alive with the Esala Festival. Devotees from all faiths walked from afar (Pada Yatra) to fulfill vows. The fire-walking ceremony and the water-cutting ritual were the main attractions of this mystical event.",
+        title: "Jaffna Int. Cricket Stadium",
+        date: "July 2025",
+        image: "background.png", 
+        description: "Construction work officially began for the new International Cricket Stadium in Mandaitivu, Jaffna. The project aims to bring world-class sports facilities to the North and host international matches by 2027.",
         highlights: [
-            "Pada Yatra (Foot Pilgrimage)",
-            "Fire Walking Ceremony",
-            "Kavadi Dance",
-            "Water Cutting Ceremony"
+            "Foundation Stone Laying",
+            "Public-Private Partnership",
+            "Development of Northern Sports",
+            "Source: NewsFirst / Sports Ministry"
         ]
     },
     8: {
         month: "August",
         title: "Kandy Esala Perahera",
-        date: "August 20, 2025",
+        date: "August 2025",
         image: "event_culture.png",
-        description: "The Temple of the Tooth in Kandy hosted the world-famous Esala Perahera. Over ten days, the procession grew in grandeur, featuring the majestic Maligawa Tusker carrying the Sacred Tooth Relic casket. It remains one of the most spectacular cultural pageants in Asia.",
+        description: "The annual Kandy Esala Perahera paraded the streets with its usual grandeur. This year saw a higher influx of international tourists, and special digital viewing galleries were introduced for global audiences.",
         highlights: [
-            "Procession of the Sacred Tooth Relic",
-            "Kandyan Drummers and Dancers",
-            "Diyawadana Nilame's Participation",
-            "Randoli Perahera Grand Finale"
+            "Grand Procession of the Tooth Relic",
+            "Traditional Dancers & Elephants",
+            "UNESCO Cultural Heritage celebration",
+            "Source: Dalada Maligawa Media"
         ]
     },
     9: {
         month: "September",
-        title: "Asian Youth Games Victory",
-        date: "September 10, 2025",
-        image: "event_nature.png", 
-        description: "Sri Lankan young athletes made history at the Asian Youth Games, securing a record number of gold medals in athletics and cricket. The team returned to a hero's welcome at the airport, inspiring a new generation of sports stars.",
+        title: "Central Expressway Resumes",
+        date: "September 2025",
+        image: "background.png", 
+        description: "Work on the stalled sections of the Central Expressway (Kadawatha to Mirigama) resumed with new funding secured. The completion of this highway is critical for linking Colombo with Kandy and Kurunegala efficiently.",
         highlights: [
-            "Gold Medal in T20 Cricket",
-            "Record-breaking Sprints",
-            "National Welcome Parade",
-            "Sports Ministry Awards Ceremony"
+            "Restarting Section 1 Construction",
+            "Funding from new consortium",
+            "Targeted completion by 2027",
+            "Source: RDA / Ada Derana"
         ]
     },
     10: {
         month: "October",
-        title: "National IT Conference",
-        date: "October 05, 2025",
+        title: "National Digital ID Launch",
+        date: "October 2025",
         image: "summary_bg.png",
-        description: "The National IT Conference (NITC 2025) showcased Sri Lanka's rising status as a tech hub. Startups pitched revolutionary AI and blockchain solutions, while major global tech firms announced new investments in the Colombo Port City.",
+        description: "The government rolled out the first phase of the National Digital ID system. This biometrically secured ID card aims to streamline welfare distribution, banking, and government services for all citizens.",
         highlights: [
-            "Tech Startup Awards",
-            "AI & Robotics Exhibition",
-            "Port City Tech Park Inauguration",
-            "Hackathons for University Students"
+            "Biometric Data Integration",
+            "Paperless Government Services",
+            "Partnership with Indian Tech firms",
+            "Source: ICTA"
         ]
     },
     11: {
         month: "November",
-        title: "Deepavali Festival of Lights",
-        date: "November 1, 2025",
-        image: "event_lights.png",
-        description: "Deepavali was celebrated with joy across the island, especially in the hill country and north. Homes were adorned with clay lamps (diyas) and colorful rangoli patterns. It was a celebration of triumph of good over evil and knowledge over ignorance.",
+        title: "Cyclone 'Ditwah' Impact",
+        date: "November 2025",
+        image: "event_nature.png",
+        description: "Cyclone 'Ditwah' made landfall in the Eastern province, causing widespread flooding and displacing thousands. The disaster response teams were mobilized immediately, and international aid poured in to assist the affected communities in Trincomalee and Batticaloa.",
         highlights: [
-            "Oil Lamp Decorations",
-            "Kolam / Rangoli Art",
-            "Special Puja Services at Kovils",
-            "Sweetmeat Exchange"
+            "Landfall in Eastern Coast",
+            "Emergency Relief Operations",
+            "International Aid Mobilization",
+            "Source: Met Dept / DMC"
         ]
     },
     12: {
         month: "December",
-        title: "Year End Grand Finale",
-        date: "December 31, 2025",
-        image: "background.png",
-        description: "As 2025 came to a close, Colombo's skyline lit up with a massive fireworks display. Hotels and beaches were packed with revelers welcoming 2026. It was a moment to look back at a year of resilience, culture, and growth.",
+        title: "World Bank Relief Aid",
+        date: "December 2025",
+        image: "summary_bg.png",
+        description: "The World Bank approved a major relief package to support Sri Lanka's post-cyclone reconstruction and ongoing economic reforms. The funds are allocated for rebuilding housing, schools, and restoring agricultural livelihoods.",
         highlights: [
-            "Colombo Port City Fireworks",
-            "Musical Concerts",
-            "Countdown Parties",
-            "New Year Religious Blessings"
+            "$500 Million Grant",
+            "Housing Reconstruction Project",
+            "Support for Small Businesses",
+            "Source: World Bank / Colombo Gazette"
         ]
     }
 };
