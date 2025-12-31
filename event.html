@@ -22,6 +22,11 @@
             const data = eventsData[id];
 
             if (data) {
+                const currentId = parseInt(id);
+                // Navigation logic
+                const nextId = currentId < 12 ? currentId + 1 : 1;
+                const prevId = currentId > 1 ? currentId - 1 : 12;
+
                 const container = document.getElementById('event-container');
                 container.innerHTML = `
                     <div class="event-hero">
@@ -42,8 +47,10 @@
                             </ul>
                         </div>
 
-                        <div style="text-align:center;">
-                            <a href="index.html#summary" class="back-btn">← Back to Summary</a>
+                        <div style="text-align:center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 40px;">
+                            <a href="event.html?id=${prevId}" class="back-btn" style="border-color: rgba(255,255,255,0.3);">← Previous</a>
+                            <a href="index.html#summary" class="back-btn">Summary</a>
+                            <a href="event.html?id=${nextId}" class="back-btn" style="background: white; color: black;">Next Event →</a>
                         </div>
                     </div>
                     <footer>
