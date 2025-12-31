@@ -10,6 +10,10 @@ const eventsData = {
             "Sri Lanka won ODI Series 2-0 in Colombo",
             "Young talent showcased in limited-overs matches",
             "Source: Sri Lanka Cricket / Fox Sports"
+        ],
+        extraMedia: [
+            { type: "video", src: "https://www.youtube.com/embed/j_hG0lF_F4k" },
+            { type: "image", src: "img_jul_stadium.jpg" }
         ]
     },
     2: {
@@ -23,6 +27,9 @@ const eventsData = {
             "Rs. 500 Million for Digital Trade systems",
             "Formulation of 2025-2029 Export Plan",
             "Source: Ministry of Finance / Daily FT"
+        ],
+        extraMedia: [
+            { type: "video", src: "https://www.youtube.com/embed/v98fN_mPyuQ" }
         ]
     },
     3: {
@@ -49,6 +56,9 @@ const eventsData = {
             "Direct connectivity to Palaly Airport",
             "Operating hours: 6:00 AM to 5:00 PM",
             "Source: PMD News / Jaffna Secretariat"
+        ],
+        extraMedia: [
+            { type: "video", src: "https://www.youtube.com/embed/XqC9LwE7eWc" }
         ]
     },
     5: {
@@ -101,6 +111,9 @@ const eventsData = {
             "Record international visitor turnout",
             "Centuries-old cultural traditions",
             "Source: Dalada Maligawa Media Unit"
+        ],
+        extraMedia: [
+            { type: "video", src: "https://www.youtube.com/embed/j_8jH4tV-oM" }
         ]
     },
     9: {
@@ -140,6 +153,9 @@ const eventsData = {
             "Impacted all 25 districts of the island",
             "Major Agricultural and Infrastructure loss",
             "Source: DMC / UN OCHA"
+        ],
+        extraMedia: [
+            { type: "video", src: "https://www.youtube.com/embed/5U2fI6p28uE" }
         ]
     },
     12: {

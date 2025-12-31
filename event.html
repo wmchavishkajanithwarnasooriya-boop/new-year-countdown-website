@@ -47,6 +47,25 @@
                             </ul>
                         </div>
 
+                        ${data.extraMedia && data.extraMedia.length > 0 ? `
+                        <div class="media-gallery" style="margin-top: 40px;">
+                            <h3 style="color:white; margin-bottom:20px; font-family:'Outfit';">Gallery & Media</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                                ${data.extraMedia.map(item => {
+                                    if(item.type === 'image') {
+                                        return `<img src="${item.src}" style="width:100%; border-radius:15px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.5);" alt="Gallery Image">`;
+                                    } else if(item.type === 'video') {
+                                        return `
+                                            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 15px;">
+                                                <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" src="${item.src}" allowfullscreen></iframe>
+                                            </div>`;
+                                    }
+                                    return '';
+                                }).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+
                         <div style="text-align:center; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 40px;">
                             <a href="event.html?id=${prevId}" class="back-btn" style="border-color: rgba(255,255,255,0.3);">← Previous</a>
                             <a href="index.html#summary" class="back-btn">Summary</a>
