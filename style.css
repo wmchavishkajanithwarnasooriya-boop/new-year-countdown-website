@@ -79,6 +79,15 @@ body {
     flex-wrap: wrap;
     padding-top: 100px;
     padding-bottom: 100px;
+    position: relative;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-section.celebration-active .text-container,
+.hero-section.celebration-active .countdown-container {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
 }
 
 .text-container {
@@ -94,6 +103,7 @@ body {
     margin-bottom: 20px;
     background: linear-gradient(to right, #ffffff, #c0c0c0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -136,8 +146,7 @@ body {
     position: relative;
     min-height: 100vh;
     padding: 100px 5%;
-    background: #000 url('summary_bg.png') no-repeat center center fixed;
-    background-size: cover;
+    background: transparent;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -469,4 +478,76 @@ body {
         border-top: 1px solid #ddd;
         padding-top: 40px;
     }
+}
+
+/* Celebration Overlay (Local to Hero Area) */
+#celebration-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Removed all background and blur as requested */
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+#celebration-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-container {
+    position: relative;
+    z-index: 1001;
+    text-align: center;
+}
+
+.welcome-msg {
+    font-size: clamp(2.5rem, 12vw, 8rem);
+    /* Using modern Outfit font for the main message for a cleaner look */
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #fff 0%, #d4af37 50%, #fff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.4));
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.welcome-msg.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.sub-welcome {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 15px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 1s 0.8s;
+}
+
+.sub-welcome.active {
+    opacity: 0.8;
+    transform: translateY(0);
 }
