@@ -1,27 +1,27 @@
 const eventsData = {
     1: {
         month: "January",
-        title: "Australian Cricket Tour Victory",
+        title: "Australian Cricket Tour",
         date: "January 2025",
-        image: "background.png", /* Reuse existing */
-        description: "The Sri Lankan cricket team started the year on a high note with a historic series victory against the touring Australian team. The Test series, played in Galle, saw spin dominance, while the ODIs showcased the young batting talent of the island.",
+        image: "background.png", 
+        description: "Sri Lanka Cricket (SLC) celebrated a historic series victory against the touring Australian team. The matches were a display of grit and skill, with young talents shining on home soil.",
         highlights: [
-            "Series Win against Australia",
-            "Record-breaking spin bowling performance",
-            "Packed stadiums in Galle and Colombo",
-            "Source: SLC / ESPNcricinfo"
+            "Test Series Win in Galle",
+            "ODI Series Victory",
+            "Record crowd attendance",
+            "Source: Sri Lanka Cricket / ESPNcricinfo"
         ]
     },
     2: {
         month: "February",
         title: "2025 Budget & Export Plan",
         date: "February 2025",
-        image: "summary_bg.png", 
-        description: "The Ministry of Finance presented the 2025 Budget, focusing heavily on export-oriented growth and digital infrastructure. New tax incentives for IT and agricultural exports were introduced to boost foreign reserves.",
+        image: "summary_bg.png",
+        description: "The Ministry of Finance unveiled the 2025 Budget proposals, emphasizing a shift towards an export-oriented economy. Key reforms targeted digital infrastructure and agricultural exports.",
         highlights: [
-            "Focus on Export Economy",
-            "Tax incentives for Startups",
-            "Green Energy subsidies",
+            "Export-focused Economic Policy",
+            "New Tax Structure for SMEs",
+            "digital economy incentives",
             "Source: Ministry of Finance / Daily FT"
         ]
     },
@@ -30,25 +30,25 @@ const eventsData = {
         title: "Interest Rates Plunge",
         date: "March 2025",
         image: "summary_bg.png",
-        description: "The Central Bank of Sri Lanka announced a significant reduction in policy interest rates, signaling economic recovery and encouraging private sector investment. Inflation figures dropped to single digits, stabilizing the cost of living.",
+        description: "The Central Bank of Sri Lanka (CBSL) announced a major reduction in policy interest rates, aiming to stimulate economic growth and reduce the cost of borrowing for businesses.",
         highlights: [
-            "Policy Rate cut by 200 basis points",
-            "Boost for Construction Industry",
-            "Stock Market Rally",
-            "Source: CBSL Monthly Review"
+            "Policy Rate Cut",
+            "Economic Recovery Signal",
+            "Boost for Real Estate",
+            "Source: CBSL Monthly Economic Review"
         ]
     },
     4: {
         month: "April",
-        title: "Vasavilan-Palaly Road Opens",
+        title: "Vasavilan-Palaly Road",
         date: "April 2025",
-        image: "background.png",
-        description: "In a landmark move for reconciliation and development, the Vasavilan-Palaly road was fully opened to the public after decades. This reopening significantly improved connectivity in the Northern Peninsula and facilitated easier access to the Palaly Airport.",
+        image: "event_nature.png",
+        description: "The historic Vasavilan-Palaly road was reopened to the public, marking a significant step in reconciliation. This allows direct access to the Palaly Airport and reconnects communities.",
         highlights: [
-            "Restored North-South connectivity",
-            "Access to Palaly International Airport",
-            "Return of undisputed lands to civilians",
-            "Source: PMD / The Morning"
+            "Reopening after 30 years",
+            "Direct Airport Access",
+            "Community Reconciliation",
+            "Source: PMD News / The Morning"
         ]
     },
     5: {
@@ -56,11 +56,11 @@ const eventsData = {
         title: "Sancharaka Udawa 2025",
         date: "May 2025",
         image: "event_lights.png",
-        description: "The 'Sancharaka Udawa' tourism exhibition returned on a grand scale, showcasing Sri Lanka's potential as a premier travel destination. Over 500 exhibitors participated, and the event highlighted sustainable tourism practices.",
+        description: "The 'Sancharaka Udawa' exhibition brought together tourism stakeholders to showcase Sri Lanka's potential. The event focused on sustainable tourism and attracting high-end travelers.",
         highlights: [
-            "Exhibition at BMICH",
-            "Launch of new Eco-Tourism zones",
-            "Global Tour Operator meetups",
+            "Largest Tourism Fair",
+            "Sustainable Tourism Focus",
+            "Global Operator Meetups",
             "Source: SLTPB"
         ]
     },
@@ -68,12 +68,12 @@ const eventsData = {
         month: "June",
         title: "Sinopec Refinery Deal",
         date: "June 2025",
-        image: "summary_bg.png", 
-        description: "Sri Lanka signed a definitive agreement with Sinopec to establish a major oil refinery in Hambantota. This multi-billion dollar investment is the largest foreign direct investment (FDI) in the country's history, promising energy security and jobs.",
+        image: "port_city.jpg",
+        description: "A landmark agreement was signed with Sinopec to build a modern oil refinery. This investment is set to transform the energy sector and ensure fuel security for the island.",
         highlights: [
-            "$4.5 Billion Investment",
-            "Hambantota Energy Hub launch",
-            "Employment for local youth",
+            "Multi-billion Dollar FDI",
+            "Energy Security Secured",
+            "Job Creation in Hambantota",
             "Source: Ministry of Power / Reuters"
         ]
     },
@@ -81,64 +81,64 @@ const eventsData = {
         month: "July",
         title: "Jaffna Int. Cricket Stadium",
         date: "July 2025",
-        image: "background.png", 
-        description: "Construction work officially began for the new International Cricket Stadium in Mandaitivu, Jaffna. The project aims to bring world-class sports facilities to the North and host international matches by 2027.",
+        image: "cricket_logo.png",
+        description: "Construction began on the Jaffna International Cricket Stadium. This project aims to decentralize sports infrastructure and bring international matches to the Northern populace.",
         highlights: [
             "Foundation Stone Laying",
-            "Public-Private Partnership",
-            "Development of Northern Sports",
-            "Source: NewsFirst / Sports Ministry"
+            "International Standards",
+            "Sports Development in North",
+            "Source: NewsFirst.lk / Sports Ministry"
         ]
     },
     8: {
         month: "August",
-        title: "Kandy Esala Perahera",
+        title: "Esala Perahera Festival",
         date: "August 2025",
         image: "event_culture.png",
-        description: "The annual Kandy Esala Perahera paraded the streets with its usual grandeur. This year saw a higher influx of international tourists, and special digital viewing galleries were introduced for global audiences.",
+        description: "The streets of Kandy came alive with the Esala Perahera, showcasing Sri Lanka's rich cultural heritage. The festival attracted record numbers of tourists this year.",
         highlights: [
-            "Grand Procession of the Tooth Relic",
-            "Traditional Dancers & Elephants",
-            "UNESCO Cultural Heritage celebration",
-            "Source: Dalada Maligawa Media"
+            "Grand Cultural Procession",
+            "Sacred Tooth Relic",
+            "Traditional Dance & Music",
+            "Source: Cultural Ministry"
         ]
     },
     9: {
         month: "September",
         title: "Central Expressway Resumes",
         date: "September 2025",
-        image: "background.png", 
-        description: "Work on the stalled sections of the Central Expressway (Kadawatha to Mirigama) resumed with new funding secured. The completion of this highway is critical for linking Colombo with Kandy and Kurunegala efficiently.",
+        image: "background.png",
+        description: "Work resumed on the Central Expressway, a critical project for connecting the country's economic hubs. The road development authority announced expedited timelines for completion.",
         highlights: [
-            "Restarting Section 1 Construction",
-            "Funding from new consortium",
-            "Targeted completion by 2027",
+            "Construction Restarted",
+            "Connecting Major Cities",
+            "Economic Corridor Growth",
             "Source: RDA / Ada Derana"
         ]
     },
     10: {
         month: "October",
-        title: "National Digital ID Launch",
+        title: "National IT Conference",
         date: "October 2025",
         image: "summary_bg.png",
-        description: "The government rolled out the first phase of the National Digital ID system. This biometrically secured ID card aims to streamline welfare distribution, banking, and government services for all citizens.",
+        description: "The National IT Conference (NITC 2025) highlighted the country's growing tech ecosystem. Experts discussed AI, cybersecurity, and the future of Sri Lanka's digital economy.",
         highlights: [
-            "Biometric Data Integration",
-            "Paperless Government Services",
-            "Partnership with Indian Tech firms",
-            "Source: ICTA"
+            "Tech Innovation Showcase",
+            "Global Speakers",
+            "Digital Economy Roadmap",
+            "Source: CSSL / NITC"
         ]
     },
     11: {
         month: "November",
         title: "Cyclone 'Ditwah' Impact",
         date: "November 2025",
-        image: "event_nature.png",
-        description: "Cyclone 'Ditwah' made landfall in the Eastern province, causing widespread flooding and displacing thousands. The disaster response teams were mobilized immediately, and international aid poured in to assist the affected communities in Trincomalee and Batticaloa.",
+        image: "cyclone_real.jpg",
+        description: "Cyclone 'Ditwah' brought heavy rains and strong winds to the island. Disaster management teams worked tirelessly to provide relief to affected communities in the coastal areas.",
         highlights: [
-            "Landfall in Eastern Coast",
-            "Emergency Relief Operations",
-            "International Aid Mobilization",
+            "Disaster Response Mobilized",
+            "Community Resilience",
+            "International Aid Support",
             "Source: Met Dept / DMC"
         ]
     },
@@ -147,12 +147,12 @@ const eventsData = {
         title: "World Bank Relief Aid",
         date: "December 2025",
         image: "summary_bg.png",
-        description: "The World Bank approved a major relief package to support Sri Lanka's post-cyclone reconstruction and ongoing economic reforms. The funds are allocated for rebuilding housing, schools, and restoring agricultural livelihoods.",
+        description: "The World Bank announced significant relief aid to support Sri Lanka's economic recovery and infrastructure rebuilding efforts, closing the year with a hopeful outlook.",
         highlights: [
-            "$500 Million Grant",
-            "Housing Reconstruction Project",
-            "Support for Small Businesses",
-            "Source: World Bank / Colombo Gazette"
+            "Major Financial Grant",
+            "Infrastructure Rebuilding",
+            "Economic Stability Support",
+            "Source: World Bank Sri Lanka / Colombo Gazette"
         ]
     }
 };
