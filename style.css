@@ -344,16 +344,22 @@ footer {
 
     .countdown-container {
         width: 100%;
-        padding: 20px;
+        padding: 30px 20px 60px 20px; /* Increased bottom padding for footer */
+        margin-top: 30px; /* Add some space from the button */
     }
 
     .time-value {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Slightly larger for better visibility */
     }
     
     .countdown-item:not(:last-child)::after {
         font-size: 1.5rem;
-        top: 5px;
+        top: 10px;
         right: -10px;
+    }
+
+    .countdown-footer {
+        font-size: 0.8rem;
+        bottom: 20px; /* Adjust layout */
     }
 }
